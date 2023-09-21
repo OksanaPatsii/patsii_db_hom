@@ -7,11 +7,11 @@
 
 2. Вывести среднюю/MAX/MIN стоимости и ко-во товаров из категорий 3 и 5
 SELECT
-    Categories.CategoryName,
-    AVG(Products.Price) AS avg_price,
-    MAX(Products.Price) AS max_price,
-    MIN(Products.Price) AS min_price,
-    SUM(Products.Price * OrderDetails.Quantity) AS number_of_products
+Categories.CategoryName,
+AVG(Products.Price) AS avg_price,
+MAX(Products.Price) AS max_price,
+MIN(Products.Price) AS min_price,
+SUM(Products.Price * OrderDetails.Quantity) AS number_of_products
 FROM Products
 JOIN Categories ON Products.CategoryID = Categories.CategoryID
 JOIN OrderDetails ON Products.ProductID = OrderDetails.ProductID
